@@ -1,0 +1,27 @@
+.app-wrapper {
+    width: 900px;
+    grid-template-areas:
+"header header header header header header"
+"nav nav body body body body"
+"nav nav body body body body"
+"nav nav body body body body"
+"nav nav body body body body"
+"nav nav body body body body";
+    display: grid;
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: repeat(6, 1fr);
+    /*grid-gap: 10px;*/
+    border: 1px solid black;
+    height: auto;
+    margin: 10px;
+}
+
+.app-wrapper-content {
+    grid-area: body;
+    border: 1px solid black;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: burlywood;
+}

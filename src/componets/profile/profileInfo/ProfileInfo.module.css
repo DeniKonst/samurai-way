@@ -1,0 +1,15 @@
+.logoBody {
+    height: 300px;
+    width: 597px;
+}
+
+.imgLogoBody {
+    height: 100px;
+    width: 100px;
+}
+
+.logo1 {
+    display: flex;
+    align-items: flex-start;
+    color: maroon;
+}
