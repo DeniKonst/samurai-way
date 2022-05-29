@@ -1,6 +1,6 @@
 import React from "react";
+import {DialogsContainer} from "../DialogsContainer";
 import styles from './../Dialogs.module.css';
-
 
 
 export type PropsMesType = {

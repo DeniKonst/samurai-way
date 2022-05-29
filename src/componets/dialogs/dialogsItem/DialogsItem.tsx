@@ -11,6 +11,7 @@ export const DialogItem = (props: PropsType) => {
     return (
         <div className={styles.dialog + ' ' + styles.active}>
         <NavLink to={path}>{props.name}</NavLink>
+           
             </div>
     )
 }

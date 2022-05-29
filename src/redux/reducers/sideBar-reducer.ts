@@ -2,7 +2,7 @@
 
 let initialState = {}
 
-const sideBarReducer = (state=initialState, action) => {
+export const sideBarReducer = (state=initialState, action:any) => {
 
 }
 export default sideBarReducer

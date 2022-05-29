@@ -1,25 +1,25 @@
-import React from "react";
+import React, {ChangeEvent} from "react";
 import styles from './MyPosts.module.css'
+import { MyPostsPropsType } from "./MyPostsContainer";
 import {Post} from "./post/Post";
 
-type PostType = {
-    message: string
-    likeCount: string
-}
 
-let postData: PostType[] = [
-    {message: "hi gues", likeCount: '12'},
-    {message: "hi girls", likeCount: '33'}
-]
+export const MyPosts = (props: MyPostsPropsType) => {
+    let postElements = props.profilePage.posts.map(el => <Post  message={el.message} likeCount={el.likeCount}/>)
+    let onAddPost = () => {
+        props.addPost()
+    }
 
-let postElements = postData.map(el => <Post message={el.message} likeCount={el.likeCount}/>)
+    let onPostChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+        let text = e.currentTarget.value
+        props.updateNewPostText(text)
+    }
 
-export const MyPosts = () => {
     return (
         <>
             <div className={styles.myPost}>My post</div>
-            <textarea></textarea>
-            <button>Add post</button>
+            <textarea value={props.profilePage.newPostText} onChange={onPostChange}></textarea>
+            <button onClick={onAddPost}>Add post</button>
             {postElements}
 
         </>
